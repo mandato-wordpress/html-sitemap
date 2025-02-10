@@ -4,7 +4,7 @@ Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, pages, shortcode
 Requires at least: 2.7
 Tested up to: 6.7.1
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 Requires PHP: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -108,11 +108,14 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 
 == Changelog ==
 
-= 1.3.5 =
+= 1.3.6 =
 * Released on 2/09/2025
 * Tested with WordPress up to version 6.7.1
 * Project now managed on [GitHub](https://github.com/mandato-wordpress/html-sitemap)
 
+
+= 1.3.5 =
+* Release skipped
 
 = 1.3.4 =
 * Released on 8/13/2024
