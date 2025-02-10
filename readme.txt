@@ -108,12 +108,6 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 
 == Changelog ==
 
-= 1.3.5 =
-* Released on 2/09/2025
-* Tested with WordPress up to version 6.7.1
-* Project now managed on [GitHub](https://github.com/mandato-wordpress/html-sitemap)
-
-
 = 1.3.4 =
 * Released on 8/13/2024
 * Tested with WordPress up to version 6.6
