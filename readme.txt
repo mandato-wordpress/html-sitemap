@@ -3,8 +3,8 @@ Contributors: amandato
 Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, pages, shortcode
 Requires at least: 2.7
-Tested up to: 6.7.1
-Stable tag: 1.3.6
+Tested up to: 6.8
+Stable tag: 1.3.7
 Requires PHP: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -108,82 +108,27 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 
 == Changelog ==
 
+= 1.3.7 =
+* Released on 2025-04-21
+* Tested with WordPress up to version 6.8
+* Complete changelog moved to CHANGELOG.md
+
 = 1.3.6 =
-* Released on 2/09/2025
+* Released on 2025-02-09
 * Tested with WordPress up to version 6.7.1
 * Project now managed on [GitHub](https://github.com/mandato-wordpress/html-sitemap)
-
 
 = 1.3.5 =
 * Release skipped
 
 = 1.3.4 =
-* Released on 8/13/2024
+* Released on 2024-08-13
 * Tested with WordPress up to version 6.6
 * Readme.txt updated to latest requirements (ref: https://developer.wordpress.org/plugins/wordpress-org/how-your-readme-txt-works/)
 
 
-= 1.3.3 =
-* Released on 3/14/2020
-* Tested with WordPress up to version 5.4
-
-
-= 1.3.2 =
-* Released on 10/05/2018
-* Fixed warning messages in PHP7 when modifying the $args value when it is not an array.
-
-
-= 1.3.1 =
-* Released on 1/8/2018
-* Added a blank index.php to root plugin folder for extra security.
-* Tested with WordPress up to version 4.9.1
-
-
-= 1.3 =
-* Released on 11/24/2015
-* Added `ordered_list_type` option to use an ordered list rather than unordered. (Thanks Allie for the feature suggestion!)
-* Tested with WordPress 4.4 beta 4
-
-
-= 1.2 =
-* Released on 9/15/2015
-* Tested with WordPress 4.3.
-* Added class and id attribute options for specifying HTML class and/or id attributes in the unordered list `<ul>`. (Thanks phorbidden for the feature suggestion!)
-* Updated readme, added additional examples for the class and id attribute options.
-
-
-= 1.1.4 =
-* Released on 1/11/2015
-* Tested with WordPress 4.1.
-* End of source no longer includes closing PHP tag as recommended by WordPress.
-* Updated readme, added additional example excluding multipe pages.
-
-
-= 1.1.3 =
-* Released 3/11/2013
-* HTML Sitemap compatible with latest versions of WordPress up to 3.5.1
-* Nothing has changed with this plugin other than the readme.txt.
-
-
-= 1.1.2 =
-* Released 1/31/2012
-* Hyphen in shortcode changed to underscore. `html_sitemap` and `htmlsitemap` shortcodes work.  [read more here](http://wordpress.org/support/topic/plugins-wont-coexist?replies=5)
-* HTML Sitemap compatible with latest versions of WordPress up to 3.3.1
-
-= 1.1.1 =
-* Released 6/27/2010
-* HTML Sitemap compatible with latest versions of WordPress 2.9 and 3.0.
-
-= 1.1.0 =
-* Released on 11/24/2009
-* Fixed typos in readme
-* Added child_of options
-** child_of=CURRENT (starts list of pages that are children of the current page)
-** child_of=PARENT (starts list of pages that are of the same level as current page)
-
-= 1.0.0 =
-* Released on 09/05/2009
-* Initial release of HTML Page Sitemap plugin.
+= Complete Changelog =
+[Complete changelog available on GitHub](https://github.com/mandato-wordpress/html-sitemap/blob/main/CHANGELOG.md)
 
 == Upgrade Notice ==
 None at this time.
