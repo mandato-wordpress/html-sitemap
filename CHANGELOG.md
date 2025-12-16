@@ -33,6 +33,10 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
+## [1.3.8] - 2025-12-16
+
+- Tested with WordPress up to version 6.9
+
 ## [1.3.7] - 2025-04-21
 
 - Tested with WordPress up to version 6.8
