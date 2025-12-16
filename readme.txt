@@ -3,8 +3,8 @@ Contributors: amandato
 Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, pages, shortcode
 Requires at least: 2.7
-Tested up to: 6.8
-Stable tag: 1.3.7
+Tested up to: 6.9
+Stable tag: 1.3.8
 Requires PHP: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -107,6 +107,10 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 1. HTML Page Sitemap in the Default WordPress theme.
 
 == Changelog ==
+
+= 1.3.8 =
+* Released on 2025-12-16
+* Tested with WordPress up to version 6.9
 
 = 1.3.7 =
 * Released on 2025-04-21
