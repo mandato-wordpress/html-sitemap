@@ -31,7 +31,15 @@ function html_sitemap_shortcode_handler( $args, $content = null )
 	
 	$argsLocal = array();
 	if( is_array($args) ) {
-		$argsLocal = $args;
+		$allowedStrings = ['child_of','depth','date_format','link_before','link_after','post_type', 'post_status','show_date','sort_column','item_spacing','class','id','ordered_list_type'];
+		$allowedIntLists = ['authors','exclude','include'];
+		foreach( $args as $key => $value ) {
+			if( in_array( $key, $allowedStrings ) ) {
+				$argsLocal[$key] = sanitize_text_field( $value );
+			} else if( in_array( $key, $allowedIntLists ) ) {
+				$argsLocal[$key] = implode( ',', array_map( 'intval', explode( ',', str_replace(' ', '', $value) ) )	);
+			}
+		}
 	}
 	
 	$class_tag = '';
@@ -67,8 +75,8 @@ function html_sitemap_shortcode_handler( $args, $content = null )
 	if( isset($argsLocal['link_before']) ) {
 		unset($argsLocal['link_before']);
 	}
-	if( isset($argsLocal['link_before']) ) {
-		unset($argsLocal['link_befoe']);
+	if( isset($argsLocal['link_after']) ) {
+		unset($argsLocal['link_after']);
 	}
 	
 	if( isset($argsLocal['child_of']) && $argsLocal['child_of'] == 'CURRENT' ) {

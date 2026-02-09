@@ -1,5 +1,5 @@
 === HTML Page Sitemap ===
-Contributors: amandato
+Contributors: amandato, painlessanalytics
 Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, pages, shortcode
 Requires at least: 2.7
@@ -16,23 +16,40 @@ This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by e
 
 **This plugin is perfect for those who use WordPress as a CMS.**
 
-Please see documentation for the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) for a complete list of options.
+== Shortcode Tag Attribute Options ==
 
-The following options may be configured in addition to options documented in [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages):
+The following wp_list_pages tag attribute options are supported:
 
-The `class` and `id` attributes may specified set class or id values for the initial HTML Page Sitemap `<ul>` list tag.
+* `authors` &mdash; Comma-separated list of author IDs. Default empty (all authors).
+* `child_of` &mdash; ID of child page, 'CURRENT', or 'PARENT'. The value 'CURRENT' will use the current page ID. The value 'PARENT' will uses the current page parent ID.
+* `depth` &mdash; -1 (any depth), 0 (all pages), 1 (top-level pages only), 2 (top-level and 2nd level pages only), etc.
+* `date_format` &mdash; e.g. 'l, F j, Y'. See [WordPress Date Format](https://wordpress.org/documentation/article/customize-date-and-time-format/)
+* `exclude` &mdash; Comma-separated list of page IDs to exclude.
+* `include` &mdash; Comma-separated list of page IDs to include.
+* `item_spacing` &mdash; Whether to preserve whitespace within the menu’s HTML. Accepts 'preserve' or 'discard'.
+* `post_type` &mdash; Post type to query for. Default 'page'
+* `post_status` &mdash; Comma-separated list or array of post statuses to include. Default 'publish'
+* `show_date` &mdash; Whether to display the page publish or modified date for each page. Accepts 'modified' or any other value. An empty value hides the date.
+* `sort_column` &mdash; Comma-separated list of column names to sort the pages by. Accepts 'post_author', 'post_date', 'post_title', 'post_name', 'post_modified', 'post_modified_gmt', 'menu_order', 'post_parent', 'ID', 'rand', or 'comment_count'. Default 'post_title'.
 
-The `child_of` attribute value can be a numeric page ID (integer), or use the custom value CURRENT or PARENT. The value "CURRENT" will use the current page's ID. The value "PARENT" will uses the curent page's parent ID.
+Please see documentation for the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function for reference.
 
-The `ordered_list_type` attribute is an HTML Page Sitemap plugin exclusive option for specfiying an ordered list type. Not setting a ordered_list_type will use an unordered list (default).
+In addition the following tag attribute are available exclusively for this plugin:
 
-* `ordered_list_type="1"` - The list items will be numbered with numbers
-* `ordered_list_type="A"` - The list items will be numbered with uppercase letters
-* `ordered_list_type="a"` - The list items will be numbered with lowercase letters
-* `ordered_list_type="I"` - The list items will be numbered with uppercase roman numbers
-* `ordered_list_type="i"` - The list items will be numbered with lowercase roman numbers
+* `class` &mdash; Specify class values for the initial HTML Page Sitemap `<ul>` list tag.
+* `id` &mdash; Specify ID values for the initial HTML Page Sitemap `<ul>` list tag.
+* `ordered_list_type` &mdash; Specify the ordered list type. Accepts '', '1', 'A', a', 'I', and 'i'. Default empty value will display an unordered list.
 
-Note: This plugin only works with Hierarchical Custom Post Types. This plugin will not work if your post type is not heirarchical.
+The `ordered_list_type` attribute options in more detail:
+
+* `ordered_list_type=""` &mdash; The list items will be unordered
+* `ordered_list_type="1"` &mdash; The list items will be numbered with numbers
+* `ordered_list_type="A"` &mdash; The list items will be numbered with uppercase letters
+* `ordered_list_type="a"` &mdash; The list items will be numbered with lowercase letters
+* `ordered_list_type="I"` &mdash; The list items will be numbered with uppercase roman numbers
+* `ordered_list_type="i"` &mdash; The list items will be numbered with lowercase roman numbers
+
+Note: This plugin only works with Hierarchical Custom Post Types such as `pages`. This plugin will not work if your post type is not hierarchical. Not setting a ordered_list_type will use an unordered list (default).
 
 = Examples =
 First example shows how to add a sitemap for the entire site.
@@ -75,14 +92,20 @@ For the latest information visit the website.
 
 [http://www.pluginspodcast.com/plugins/html-page-sitemap/](http://www.pluginspodcast.com/plugins/html-page-sitemap/)
 
-= ATTENTION: HTML-SITEMAP SHORTCODE HAS CHANGED =
-Though `html-sitemap` still works, the new HTML Sitemap shortcode is `html_sitemap`. The dash/hyphen may not get processed correctly if other plugins use the same prefix such as the Syntax Highlighter plugin. [read more](http://core.trac.wordpress.org/ticket/11948), [and more](http://core.trac.wordpress.org/ticket/17657)
-
 == Frequently Asked Questions ==
 
  = Why is there no settings page for the plugin? =
  I put together this plugin in less than 2 hours, this readme.txt actually took longer to create. This plugin is meant to be simple and easy to use. To keep it simple, it doesn't add settings to your database or clutter to your admin screens.
- 
+
+ = What parameters are supported? =
+ Most of the [wp_list_pages](https://developer.wordpress.org/reference/functions/wp_list_pages/) function parameters. Specifically:
+
+
+
+In addition, the following parameters are available exclusively to this plugin:
+
+
+
 == Installation ==
 = Automatic Plugin Installation =
 Install using the [built-in plugin installer](https://codex.wordpress.org/Administration_Screens#Add_New_Plugins):
@@ -107,6 +130,11 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 1. HTML Page Sitemap in the Default WordPress theme.
 
 == Changelog ==
+
+= 1.3.9 =
+* Released on 2026-02-08
+* Fixed security issue with Authenticated user (Contributor+), user could include Cross-Site Scripting within the HTML Sitemap shortcode
+* Added banner and icon images
 
 = 1.3.8 =
 * Released on 2025-12-16
@@ -139,5 +167,5 @@ None at this time.
 
 
 == Contributors ==
-[Angelo Mandato](https://angelo.mandato.com), Founder and CTO of [Painless Analytics](https://www.painlessanalytics.com) - Plugin author
+[Angelo Mandato](https://angelo.mandato.com), founder of [Painless Analytics](https://www.painlessanalytics.com) and [FrontPup](https://www.frontpup.com) - Plugin author
 
