@@ -33,7 +33,7 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
-## [1.3.9] - 2026-02-08
+## [1.3.9] - 2026-02-09
 
 - Fixed security issue with Authenticated user (Contributor+), user could include Cross-Site Scripting within the HTML Sitemap shortcode
 - Added banner and icon images

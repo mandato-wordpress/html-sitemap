@@ -12,7 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Adds an HTML (Not XML) sitemap of your pages (not posts) by entering the shortcode [html_sitemap], perfect for those who use WordPress as a CMS.
 
 == Description ==
-This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by entering the shortcode [html_sitemap] in the page content. This simple plugin is configured with the `[html_sitemap]` shortcode. This plugin can display a sitemap with specific depths, from a specific parent page and include/exclude specific children. Shortcode attributes include `sort_column`, `sort_order`, `exclude`, `include`, `depth`, `child_of`, `meta_key`, `meta_value`, `authors`, `number`,  `offset`, `post_type`,  and `post_status`, everything the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function accepts. In addition to the `wp_list_pages` options you can also set `class`, `id`, and `ordered_list_type` options.
+This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by using the shortcode `[html_sitemap]`. This plugin can display a sitemap with specific depths, from a specific parent page and include/exclude specific pages by ID. 
+
+Shortcode attributes include `sort_column`, `sort_order`, `exclude`, `include`, `depth`, `child_of`, `meta_key`, `meta_value`, `authors`, `number`,  `offset`, `post_type`,  and `post_status` parameters from the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function. In addition you can also set `class`, `id`, and `ordered_list_type` to further customize the html page sitemap.
 
 **This plugin is perfect for those who use WordPress as a CMS.**
 
@@ -27,6 +29,10 @@ The following wp_list_pages tag attribute options are supported:
 * `exclude` &mdash; Comma-separated list of page IDs to exclude.
 * `include` &mdash; Comma-separated list of page IDs to include.
 * `item_spacing` &mdash; Whether to preserve whitespace within the menu’s HTML. Accepts 'preserve' or 'discard'.
+* `meta_key` &mdash; Limits output to pages having a specific custom field key. 
+* `meta_value` &mdash; Limits output to pages having a specific custom field value.
+* `number` &mdash; Limits the number of links displayed (SQL LIMIT).
+* `offset` &mdash; Skips a specific number of pages before displaying the list.
 * `post_type` &mdash; Post type to query for. Default 'page'
 * `post_status` &mdash; Comma-separated list or array of post statuses to include. Default 'publish'
 * `show_date` &mdash; Whether to display the page publish or modified date for each page. Accepts 'modified' or any other value. An empty value hides the date.
@@ -34,7 +40,7 @@ The following wp_list_pages tag attribute options are supported:
 
 Please see documentation for the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function for reference.
 
-In addition the following tag attribute are available exclusively for this plugin:
+In addition the following tag attributes are available exclusively for this plugin:
 
 * `class` &mdash; Specify class values for the initial HTML Page Sitemap `<ul>` list tag.
 * `id` &mdash; Specify ID values for the initial HTML Page Sitemap `<ul>` list tag.
@@ -132,7 +138,7 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 == Changelog ==
 
 = 1.3.9 =
-* Released on 2026-02-08
+* Released on 2026-02-09
 * Fixed security issue with Authenticated user (Contributor+), user could include Cross-Site Scripting within the HTML Sitemap shortcode
 * Added banner and icon images
 
