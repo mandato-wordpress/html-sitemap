@@ -4,7 +4,7 @@ Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, pages, shortcode
 Requires at least: 2.7
 Tested up to: 6.9
-Stable tag: 1.3.8
+Stable tag: 1.3.9
 Requires PHP: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Adds an HTML (Not XML) sitemap of your pages (not posts) by entering the shortcode [html_sitemap], perfect for those who use WordPress as a CMS.
 
 == Description ==
-This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by using the shortcode `[html_sitemap]`. This plugin can display a sitemap with specific depths, from a specific parent page and include/exclude specific pages by ID. 
+This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by using the shortcode `[html_sitemap]`. This plugin can display a sitemap with specific depths, from a specific parent page and include/exclude specific pages by ID. The sitemap uses the unordered HTML list tags `<ul>` and `<li>`.
 
 Shortcode attributes include `sort_column`, `sort_order`, `exclude`, `include`, `depth`, `child_of`, `meta_key`, `meta_value`, `authors`, `number`,  `offset`, `post_type`,  and `post_status` parameters from the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function. In addition you can also set `class`, `id`, and `ordered_list_type` to further customize the html page sitemap.
 
@@ -94,6 +94,10 @@ Example shortcode will display an ordered list using lowercase letters with a de
 
 `[html_sitemap ordered_list_type="a" depth=1]`
 
+Example shortcode with roman numbering in capitalization, with custom field "field-name" and custom value "field-value"
+
+`[html_sitemap ordered_list_type="I" meta_key=featured-list meta_value=yes sort_column=post_date]`
+
 For the latest information visit the website.
 
 [http://www.pluginspodcast.com/plugins/html-page-sitemap/](http://www.pluginspodcast.com/plugins/html-page-sitemap/)
@@ -103,14 +107,8 @@ For the latest information visit the website.
  = Why is there no settings page for the plugin? =
  I put together this plugin in less than 2 hours, this readme.txt actually took longer to create. This plugin is meant to be simple and easy to use. To keep it simple, it doesn't add settings to your database or clutter to your admin screens.
 
- = What parameters are supported? =
- Most of the [wp_list_pages](https://developer.wordpress.org/reference/functions/wp_list_pages/) function parameters. Specifically:
-
-
-
-In addition, the following parameters are available exclusively to this plugin:
-
-
+ = How do I style the html sitemap? =
+ The HTML sitemap can be styled by specifying your own CSS class or unique element ID. The classes and ID are added to the top level `<ul>` element of the sitemap.
 
 == Installation ==
 = Automatic Plugin Installation =
