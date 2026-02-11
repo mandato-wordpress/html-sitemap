@@ -55,7 +55,7 @@ The `ordered_list_type` attribute options in more detail:
 * `ordered_list_type="I"` &mdash; The list items will be numbered with uppercase roman numbers
 * `ordered_list_type="i"` &mdash; The list items will be numbered with lowercase roman numbers
 
-Note: This plugin only works with Hierarchical Custom Post Types such as `pages`. This plugin will not work if your post type is not hierarchical. Not setting a ordered_list_type will use an unordered list (default).
+Note: This plugin only works with Hierarchical Custom Post Types such as `pages`. This plugin will not work if your post type is not hierarchical. Not setting an ordered_list_type will use an unordered list (default).
 
 = Examples =
 First example shows how to add a sitemap for the entire site.
