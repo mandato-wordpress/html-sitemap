@@ -94,7 +94,7 @@ Example shortcode will display an ordered list using lowercase letters with a de
 
 `[html_sitemap ordered_list_type="a" depth=1]`
 
-Example shortcode with roman numbering in capitalization, with custom field "field-name" and custom value "field-value"
+Example shortcode with roman numbering in capitalization, with custom field "featured-list" and custom value "yes"
 
 `[html_sitemap ordered_list_type="I" meta_key=featured-list meta_value=yes sort_column=post_date]`
 
