@@ -12,11 +12,12 @@ Tested up to: 6.9
 Text Domain: html-sitemap
 Change Log: See readme.txt for complete change log
 Contributors: Angelo Mandato, founder of Painless Analytics
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
 Copyright 2009-2026 Angelo Mandato, (http://angelo.mandato.com)
 */
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /*
 	Add the sitemap when shortcode is encountered
