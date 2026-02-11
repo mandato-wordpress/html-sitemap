@@ -3,7 +3,7 @@
 Plugin Name: HTML Page Sitemap
 Plugin URI: http://www.pluginspodcast.com/plugins/html-page-sitemap/
 Description: <a href="https://wordpress.org/plugins/html-sitemap/" target="_blank">HTML Page Sitemap</a> Adds an HTML (Not XML) sitemap of your blog pages (not posts) by entering the shortcode [html_sitemap]. A plugin from <a href="http://angelo.mandato.com/" target="_blank">Angelo Mandato</a>.
-Version: 1.3.8
+Version: 1.3.9
 Contributors: Angelo Mandato, Founder and CTO of [Painless Analytics](https://www.painlessanalytics.com)
 Author URI: http://angelo.mandato.com/
 
@@ -11,12 +11,13 @@ Requires at least: 3.7
 Tested up to: 6.9
 Text Domain: html-sitemap
 Change Log: See readme.txt for complete change log
-Contributors: Angelo Mandato, Founder and CTO of Painless Analytics
+Contributors: Angelo Mandato, founder of Painless Analytics
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
-Copyright 2009-2025 Angelo Mandato, (http://angelo.mandato.com)
+Copyright 2009-2026 Angelo Mandato, (http://angelo.mandato.com)
 */
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /*
 	Add the sitemap when shortcode is encountered
@@ -31,7 +32,22 @@ function html_sitemap_shortcode_handler( $args, $content = null )
 	
 	$argsLocal = array();
 	if( is_array($args) ) {
-		$argsLocal = $args;
+		$allowedStrings = ['date_format','meta_key','meta_value','post_type', 'post_status','show_date','sort_column','sort_order','item_spacing','class','id','ordered_list_type'];
+		$allowedInt = ['child_of','depth','number','offset'];
+		$allowedIntLists = ['authors','exclude','include'];
+		foreach( $args as $key => $value ) {
+			if( in_array( $key, $allowedStrings ) ) {
+				$argsLocal[$key] = sanitize_text_field( $value );
+			} else if( in_array( $key, $allowedIntLists ) ) {
+				$argsLocal[$key] = implode( ',', array_map( 'intval', explode( ',', str_replace(' ', '', $value) ) )	);
+			} else if( in_array( $key, $allowedInt ) ) {
+				if( $key == 'child_of' && (strtoupper($value) == 'CURRENT' || strtoupper($value) == 'PARENT') ) {
+					$argsLocal[$key] = strtoupper($value);
+				} else {
+					$argsLocal[$key] = intval($value);
+				}
+			}
+		}
 	}
 	
 	$class_tag = '';
@@ -67,8 +83,8 @@ function html_sitemap_shortcode_handler( $args, $content = null )
 	if( isset($argsLocal['link_before']) ) {
 		unset($argsLocal['link_before']);
 	}
-	if( isset($argsLocal['link_before']) ) {
-		unset($argsLocal['link_befoe']);
+	if( isset($argsLocal['link_after']) ) {
+		unset($argsLocal['link_after']);
 	}
 	
 	if( isset($argsLocal['child_of']) && $argsLocal['child_of'] == 'CURRENT' ) {

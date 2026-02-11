@@ -33,6 +33,11 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
+## [1.3.9] - 2026-02-11
+
+- Fixed security issue with Authenticated user (Contributor+), user could include Cross-Site Scripting within the HTML Sitemap shortcode
+- Added banner and icon images
+
 ## [1.3.8] - 2025-12-16
 
 - Tested with WordPress up to version 6.9
