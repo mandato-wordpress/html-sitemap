@@ -136,7 +136,7 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 == Changelog ==
 
 = 1.3.9 =
-* Released on 2026-02-09
+* Released on 2026-02-10
 * Fixed security issue with Authenticated user (Contributor+), user could include Cross-Site Scripting within the HTML Sitemap shortcode
 * Added banner and icon images
 
