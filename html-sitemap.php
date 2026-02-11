@@ -31,7 +31,7 @@ function html_sitemap_shortcode_handler( $args, $content = null )
 	
 	$argsLocal = array();
 	if( is_array($args) ) {
-		$allowedStrings = ['date_format','link_before','link_after','meta_key','meta_value','post_type', 'post_status','show_date','sort_column','sort_order','item_spacing','class','id','ordered_list_type'];
+		$allowedStrings = ['date_format','meta_key','meta_value','post_type', 'post_status','show_date','sort_column','sort_order','item_spacing','class','id','ordered_list_type'];
 		$allowedInt = ['child_of','depth','number','offset'];
 		$allowedIntLists = ['authors','exclude','include'];
 		foreach( $args as $key => $value ) {
