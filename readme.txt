@@ -23,7 +23,7 @@ Shortcode attributes include `sort_column`, `sort_order`, `exclude`, `include`, 
 The following wp_list_pages tag attribute options are supported:
 
 * `authors` &mdash; Comma-separated list of author IDs. Default empty (all authors).
-* `child_of` &mdash; ID of child page, 'CURRENT', or 'PARENT'. The value 'CURRENT' will use the current page ID. The value 'PARENT' will uses the current page parent ID.
+* `child_of` &mdash; ID of child page, 'CURRENT', or 'PARENT'. The value 'CURRENT' will use the current page ID. The value 'PARENT' will use the current page parent ID.
 * `depth` &mdash; -1 (any depth), 0 (all pages), 1 (top-level pages only), 2 (top-level and 2nd level pages only), etc.
 * `date_format` &mdash; e.g. 'l, F j, Y'. See [WordPress Date Format](https://wordpress.org/documentation/article/customize-date-and-time-format/)
 * `exclude` &mdash; Comma-separated list of page IDs to exclude.
@@ -44,7 +44,7 @@ In addition the following tag attributes are available exclusively for this plug
 
 * `class` &mdash; Specify class values for the initial HTML Page Sitemap `<ul>` list tag.
 * `id` &mdash; Specify ID values for the initial HTML Page Sitemap `<ul>` list tag.
-* `ordered_list_type` &mdash; Specify the ordered list type. Accepts '', '1', 'A', a', 'I', and 'i'. Default empty value will display an unordered list.
+* `ordered_list_type` &mdash; Specify the ordered list type. Accepts '', '1', 'A', 'a', 'I', and 'i'. Default empty value will display an unordered list.
 
 The `ordered_list_type` attribute options in more detail:
 
