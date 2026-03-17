@@ -347,8 +347,8 @@ export default function Edit( { attributes, setAttributes } ) {
         </Placeholder>
       ) : (
         <div className="html-sitemap-preview">
-          { 
-            'Preview coming soon'
+          {
+            __( 'Preview coming soon', 'html-sitemap' )
           }
         </div>
       ) }
