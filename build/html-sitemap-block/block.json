@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "html-sitemap/html-sitemap-block",
+  "version": "2.0",
+  "title": "HTML Sitemap",
+  "category": "widgets",
+  "icon": "editor-ul",
+  "description": "HTML Sitemap WordPress plugin block.",
+  "keywords": [
+    "embed",
+    "sitemap",
+    "html",
+    "page-list",
+    "menu",
+    "navigation"
+  ],
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "html-sitemap",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "child_of": {
+      "type": "string",
+      "default": ""
+    },
+    "authors": {
+      "type": "string",
+      "default": ""
+    },
+    "include": {
+      "type": "string",
+      "default": ""
+    },
+    "exclude": {
+      "type": "string",
+      "default": ""
+    },
+    "depth": {
+      "type": "string",
+      "default": ""
+    },
+    "sort_order": {
+      "type": "string",
+      "default": ""
+    },
+    "sort_column": {
+      "type": "string",
+      "default": ""
+    },
+    "class": {
+      "type": "string",
+      "default": ""
+    },
+    "id": {
+      "type": "string",
+      "default": ""
+    },
+    "ordered_list_type": {
+      "type": "string",
+      "default": ""
+    },
+    "item_spacing": {
+      "type": "string",
+      "default": ""
+    },
+    "show_date": {
+      "type": "string",
+      "default": ""
+    },
+    "date_format": {
+      "type": "string",
+      "default": ""
+    },
+    "post_type": {
+      "type": "string",
+      "default": ""
+    },
+    "post_status": {
+      "type": "string",
+      "default": ""
+    },
+    "meta_key": {
+      "type": "string",
+      "default": ""
+    },
+    "meta_value": {
+      "type": "string",
+      "default": ""
+    },
+    "number": {
+      "type": "string",
+      "default": ""
+    },
+    "offset": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

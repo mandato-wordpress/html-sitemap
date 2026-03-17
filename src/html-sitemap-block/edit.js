@@ -29,8 +29,10 @@ import {
   ToolbarButton,
   ToolbarGroup,
   Placeholder,
+  __experimentalText as Text,
 	Button,
 } from '@wordpress/components'
+
 import { code } from '@wordpress/icons';
 
 /**
@@ -248,9 +250,78 @@ export default function Edit( { attributes, setAttributes } ) {
 
         </PanelBody>
 
-        <PanelBody title={ __( 'Advanced Filtering', 'html-sitemap' ) } initialOpen={ false }>
-
-
+        <PanelBody title={ __( 'Filters', 'html-sitemap' ) } initialOpen={ false }>
+          
+          <TextControl
+              label={ __( 'Post Type', 'html-sitemap' ) }
+              value={ attributes.post_type || '' }
+              onChange={ ( newPostType ) => {
+                setAttributes( { post_type: newPostType } );
+              } }
+              help={ 
+                __('Specify a custom post type to include in the sitemap. The default is "page".', 'html-sitemap')
+              }
+          />
+          <TextControl
+              label={ __( 'Post Status', 'html-sitemap' ) }
+              value={ attributes.post_status || '' }
+              onChange={ ( newPostStatus ) => {
+                setAttributes( { post_status: newPostStatus } );
+              } }
+              help={ 
+                __('Specify the post status to include in the sitemap. The default is "publish".', 'html-sitemap')
+              }
+          />
+          <TextControl
+              label={ __( 'Meta Key', 'html-sitemap' ) }
+              value={ attributes.meta_key || '' }
+              onChange={ ( newMetaKey ) => {
+                setAttributes( { meta_key: newMetaKey } );
+              } }
+              help={ 
+                __('Specify a meta key to filter pages by. Only pages with this meta key will be included in the sitemap.', 'html-sitemap')
+              }
+          />
+          <TextControl
+              label={ __( 'Meta Value', 'html-sitemap' ) }
+              value={ attributes.meta_value || '' }
+              onChange={ ( newMetaValue ) => {
+                setAttributes( { meta_value: newMetaValue } );
+              } }
+              help={ 
+                __('Specify a meta value to filter pages by. Only pages with this meta value for the specified meta key will be included in the sitemap.', 'html-sitemap')
+              }
+          />
+          <TextControl
+              label={ __( 'Number of Pages', 'html-sitemap' ) }
+              value={ attributes.number || '' }
+              onChange={ ( newNumber ) => {
+                setAttributes( { number: newNumber } );
+              } }
+              help={ 
+                __('Specify the maximum number of pages to include in the sitemap. The default is to include all pages.', 'html-sitemap')
+              }
+          />
+          <Text>
+            <p className="components-base-control__help">
+              { __('List must be one-dimensional.', 'html-sitemap') }
+            </p>
+          </Text>
+          <TextControl
+              label={ __( 'Offset', 'html-sitemap' ) }
+              value={ attributes.offset || '' }
+              onChange={ ( newOffset ) => {
+                setAttributes( { offset: newOffset } );
+              } }
+              help={ 
+                __('Specify the number of pages to skip before starting to include pages in the sitemap. The default is 0.', 'html-sitemap')
+              }
+          />
+          <Text>
+            <p className="components-base-control__help">
+              { __('List must be one-dimensional.', 'html-sitemap') }
+            </p>
+          </Text>
         </PanelBody>
       </InspectorControls>
 
