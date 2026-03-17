@@ -31,15 +31,17 @@ class HtmlSitemapAdmin {
     public function init() {
         // Load settings, register shortcodes, etc.
 
-        if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
-            wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
-        } else {
-            if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
-                wp_register_block_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
-            }
-            $manifest_data = require __DIR__ . '/build/blocks-manifest.php';
-            foreach ( array_keys( $manifest_data ) as $block_type ) {
-                register_block_type( __DIR__ . "/build/{$block_type}" );
+        if( function_exists('register_block_type') ) {
+            if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
+                wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
+            } else {
+                if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
+                    wp_register_block_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
+                }
+                $manifest_data = require __DIR__ . '/build/blocks-manifest.php';
+                foreach ( array_keys( $manifest_data ) as $block_type ) {
+                    register_block_type( __DIR__ . "/build/{$block_type}" );
+                }
             }
         }
     }

@@ -1,24 +1,26 @@
-=== HTML Page Sitemap ===
+=== HTML Page Sitemap (Block and Shortcode) ===
 Contributors: amandato, painlessanalytics
 Donate link: http://angelo.mandato.com/contact/
-Tags: html sitemap, sitemap, page, pages, shortcode
+Tags: html sitemap, sitemap, page, block, shortcode
 Requires at least: 3.7
 Tested up to: 6.9
-Stable tag: 1.3.9
+Stable tag: 2.0
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds an HTML (Not XML) sitemap of your pages (not posts) by entering the shortcode [html_sitemap], perfect for those who use WordPress as a CMS.
+Adds an HTML (Not XML) sitemap of your pages (not posts) by using the HTML Sitemap Block or [html_sitemap] shortcode, perfect for those who use WordPress as a CMS.
 
 == Description ==
 This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by using the shortcode `[html_sitemap]`. This plugin can display a sitemap with specific depths, from a specific parent page and include/exclude specific pages by ID. The sitemap uses the unordered HTML list tags `<ul>` and `<li>`.
 
-Shortcode attributes include `sort_column`, `sort_order`, `exclude`, `include`, `depth`, `child_of`, `meta_key`, `meta_value`, `authors`, `number`,  `offset`, `post_type`,  and `post_status` parameters from the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function. In addition you can also set `class`, `id`, and `ordered_list_type` to further customize the html page sitemap.
+New for 2.0 is the **HTML Sitemap Block**, now you can add a HTML Sitemap using the WordPress Block Editor.
+
+Attributes include `sort_column`, `sort_order`, `exclude`, `include`, `depth`, `child_of`, `meta_key`, `meta_value`, `authors`, `number`,  `offset`, `post_type`,  and `post_status` parameters from the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function. In addition you can also set `class`, `id`, and `ordered_list_type` to further customize the html page sitemap.
 
 **This plugin is perfect for those who use WordPress as a CMS.**
 
-== Shortcode Tag Attribute Options ==
+== Block / Shortcode Tag Attribute Options ==
 
 The following wp_list_pages tag attribute options are supported:
 
@@ -111,6 +113,15 @@ For the latest information visit the website.
  = How do I style the html sitemap? =
  The HTML sitemap can be styled by specifying your own CSS class or unique element ID. The classes and ID are added to the top level `<ul>` element of the sitemap.
 
+ = Does this plugin support Blocks? =
+ YES! As of version 2.0, you can now add an HTML Sitemap block to your page and customize all of the parameters.
+
+ = Does the addition of the HTML Sitemap Block impact the performance of my website? =
+ NO! The new HTML Sitemap Block is a wrapper around the `[html-sitemap]` shortcode that utilizes the built-in [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function.
+
+ = Do I have to use the new Blocks feature to use this plugin? =
+ NO! The original shortcode still works as it did in version 1.3.
+
 == Installation ==
 = Automatic Plugin Installation =
 Install using the [built-in plugin installer](https://codex.wordpress.org/Administration_Screens#Add_New_Plugins):
@@ -133,6 +144,9 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 
 == Screenshots ==
 1. HTML Page Sitemap in the Default WordPress theme.
+2. HTML Sitemap Block found in widgets category.
+3. HTML Sitemap Block in editor.
+4. Preview of Sitemap block in page "Level 1" with child_of set to CURRENT.
 
 == Changelog ==
 

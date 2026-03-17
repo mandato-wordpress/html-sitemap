@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: HTML Page Sitemap
+Plugin Name: HTML Page Sitemap (Block and shortcode)
 Plugin URI: http://www.pluginspodcast.com/plugins/html-page-sitemap/
-Description: <a href="https://wordpress.org/plugins/html-sitemap/" target="_blank">HTML Page Sitemap</a> Adds an HTML (Not XML) sitemap of your blog pages (not posts) by entering the shortcode [html_sitemap]. A plugin from <a href="http://angelo.mandato.com/" target="_blank">Angelo Mandato</a>.
-Version: 1.3.9
+Description: <a href="https://wordpress.org/plugins/html-sitemap/" target="_blank">HTML Page Sitemap</a> Adds an HTML (Not XML) sitemap of your blog pages (not posts) by using the HTML Sitemap Block or [html_sitemap] shortcode. A plugin from <a href="http://angelo.mandato.com/" target="_blank">Angelo Mandato</a>.
+Version: 2.0
 Contributors: Angelo Mandato, Founder and CTO of [Painless Analytics](https://www.painlessanalytics.com)
 Author URI: http://angelo.mandato.com/
 
