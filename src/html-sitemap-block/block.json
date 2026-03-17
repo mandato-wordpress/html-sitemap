@@ -60,6 +60,39 @@
     "item_spacing": {
       "type": "string",
       "default": ""
+    },
+    "show_date": {
+      "type": "string",
+      "default": ""
+    },
+    "date_format": {
+      "type": "string",
+      "default": ""
+    },
+    
+    "post_type": {
+      "type": "string",
+      "default": ""
+    },
+    "post_status": {
+      "type": "string",
+      "default": ""
+    },
+    "meta_key": {
+      "type": "string",
+      "default": ""
+    },
+    "meta_value": {
+      "type": "string",
+      "default": ""
+    },
+    "number": {
+      "type": "string",
+      "default": ""
+    },
+    "offset": {
+      "type": "string",
+      "default": ""
     }
   }
 }

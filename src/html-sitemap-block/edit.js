@@ -72,7 +72,7 @@ export default function Edit( { attributes, setAttributes } ) {
         </ToolbarGroup>
       </BlockControls>
       <InspectorControls>
-        <PanelBody title={ __( 'Page Settings', 'html-sitemap' ) }>
+        <PanelBody title={ __( 'Page Options', 'html-sitemap' ) }>
           <TextControl
             label={ __( 'Child Of', 'html-sitemap' ) }
             value={ attributes.child_of || '' }
@@ -114,7 +114,7 @@ export default function Edit( { attributes, setAttributes } ) {
               }
 						/>
 				</PanelBody>
-        <PanelBody title={ __( 'Advanced Filtering', 'html-sitemap' ) } initialOpen={ false }>
+        <PanelBody title={ __( 'Depth and Sorting', 'html-sitemap' ) } initialOpen={ false }>
 
           <SelectControl
               label={ __( 'Depth', 'html-sitemap' ) }
@@ -131,7 +131,7 @@ export default function Edit( { attributes, setAttributes } ) {
                 { label: __( '8th-level pages', 'html-sitemap' ), value: '8' },
                 { label: __( '9th-level pages', 'html-sitemap' ), value: '9' },
                 { label: __( '10th-level pages', 'html-sitemap' ), value: '10' },
-                { label: __( 'Any depth', 'html-sitemap' ), value: '-1' },
+                { label: __( 'All in one-dimensional list', 'html-sitemap' ), value: '-1' },
               ] }
               onChange={ ( newDepth ) => {
                 setAttributes( { depth: newDepth } );
@@ -206,6 +206,51 @@ export default function Edit( { attributes, setAttributes } ) {
                 __('Specify the type of ordered list. This will be applied to the <ol> element if the sitemap is rendered as an ordered list.', 'html-sitemap')
               }
           />
+          <SelectControl
+              label={ __( 'Item Spacing', 'html-sitemap' ) }
+              value={ attributes.item_spacing || '' }
+              options={ [
+                { label: __( 'Preserve', 'html-sitemap' ), value: '' },
+                { label: __( 'Discard', 'html-sitemap' ), value: 'discard' },
+              ] }
+              onChange={ ( newItemSpacing ) => {
+                setAttributes( { item_spacing: newItemSpacing } );
+              } }
+              help={ 
+                __('Preserve whitespace within the menu’s HTML.', 'html-sitemap')
+              }
+          />
+          <SelectControl
+              label={ __( 'Show Page Dates', 'html-sitemap' ) }
+              value={ attributes.show_date || '' }
+              options={ [
+                { label: __( 'No', 'html-sitemap' ), value: '' },
+                { label: __( 'Published date', 'html-sitemap' ), value: 'true' },
+                { label: __( 'Last modified date', 'html-sitemap' ), value: 'modified' },
+              ] }
+              onChange={ ( newShowDate ) => {
+                setAttributes( { show_date: newShowDate } );
+              } }
+              help={ 
+                __('Whether to display the date in the sitemap.', 'html-sitemap')
+              }
+          />
+          <TextControl
+              label={ __( 'Date Format', 'html-sitemap' ) }
+              value={ attributes.date_format || '' }
+              onChange={ ( newDateFormat ) => {
+                setAttributes( { date_format: newDateFormat } );
+              } }
+              help={ 
+                __('Specify the date format to use if page dates are displayed. This should be a valid date format string as defined in the WordPress documentation.', 'html-sitemap')
+              }
+          />
+
+        </PanelBody>
+
+        <PanelBody title={ __( 'Advanced Filtering', 'html-sitemap' ) } initialOpen={ false }>
+
+
         </PanelBody>
       </InspectorControls>
 
