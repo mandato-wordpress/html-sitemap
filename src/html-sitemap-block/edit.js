@@ -26,7 +26,7 @@ import {
   ToolbarButton,
   ToolbarGroup,
   Placeholder,
-  __experimentalText as Text,
+  Text,
 } from '@wordpress/components'
 
 import { code } from '@wordpress/icons';
@@ -38,6 +38,8 @@ import { code } from '@wordpress/icons';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
+
+import { generateShortcode } from './shortcode';
 
 const escapeShortcodeAttributeValue = ( value ) => {
  	if ( value === null || value === undefined ) {
@@ -338,10 +340,7 @@ export default function Edit( { attributes, setAttributes } ) {
           instructions={ __( 'Configure the block settings to generate the shortcode.', 'html-sitemap' ) }
         >
           <code>
-            [html_sitemap 
-              {Object.entries(attributes).some(([key, value]) => value !== '' && key !== 'className') ? ' ' : ''}
-              {Object.entries(attributes).filter(([key, value]) => value !== '' && key !== 'className').map(([key, value]) => `${key}="${escapeShortcodeAttributeValue( value )}"`).join(' ')}
-            ]
+            { generateShortcode(attributes) }
           </code>
         </Placeholder>
       ) : (

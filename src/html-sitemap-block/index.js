@@ -3,6 +3,7 @@ import './style.scss';
 import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
+import { generateShortcode } from './shortcode';
 
 // HTML Page Sitemap icon
 const icon = (
@@ -21,18 +22,10 @@ registerBlockType( metadata.name, {
         type: 'block',
         blocks: [ 'core/shortcode' ],
         transform: ( attributes ) => {
-          var shortcodeText = '[html_sitemap';
-          Object.entries(attributes).forEach(([key, value]) => {
-            if (value !== '' && key !== 'className') {
-              shortcodeText += ` ${key}="${value}"`;
-            }
-          });
-          shortcodeText += ']';
-
           return createBlock( 'core/shortcode', {
             // Map attributes from your block to the target block
             // Save the shortcode to text:
-            text: shortcodeText,
+            text: generateShortcode(attributes),
           });
         }
       },

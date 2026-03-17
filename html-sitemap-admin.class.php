@@ -45,6 +45,6 @@ class HtmlSitemapAdmin {
             }
         }
     }
-};
+}
 
 // eof

@@ -5,6 +5,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps } from '@wordpress/block-editor';
+import { generateShortcode } from './shortcode';
 
 const escapeShortcodeAttributeValue = ( value ) => {
  	if ( value === null || value === undefined ) {
@@ -29,10 +30,7 @@ export default function save( { attributes }) {
   
 	return (
 		<div { ...useBlockProps.save() }>
-      [html_sitemap 
-        {Object.entries(attributes).some(([key, value]) => value !== '' && key !== 'className') ? ' ' : ''}
-        {Object.entries(attributes).filter(([key, value]) => value !== '' && key !== 'className').map(([key, value]) => `${key}="${escapeShortcodeAttributeValue( value )}"`).join(' ')}
-      ]
+      {generateShortcode(attributes)}
 		</div>
 	);
 }
