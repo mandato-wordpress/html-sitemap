@@ -92,7 +92,7 @@ function html_sitemap_shortcode_handler( $args, $content = null )
 	if( isset($argsLocal['child_of']) && $argsLocal['child_of'] == 'CURRENT' ) {
 		$argsLocal['child_of'] = get_the_ID();
 	} else if( isset($argsLocal['child_of']) && $argsLocal['child_of'] == 'PARENT' ) {
-		$post = &get_post( get_the_ID() );
+		$post = get_post( get_the_ID() );
 		if( $post->post_parent )
 			$argsLocal['child_of'] = $post->post_parent;
 		else
