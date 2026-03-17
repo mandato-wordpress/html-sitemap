@@ -33,7 +33,7 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
-## [2.0] - 2026-03-18
+## [2.0] - 2026-03-17
 
 Block editor functionality.
 

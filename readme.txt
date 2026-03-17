@@ -151,8 +151,9 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 == Changelog ==
 
 = 2.0 =
-* Released on 2026-03-18
+* Released on 2026-03-17
 * Added Block Editor block for HTML Sitemap with support for all shortcode attributes.
+* Updated readme.txt with block editor instructions and screenshots.
 
 = 1.3.9 =
 * Released on 2026-02-11
