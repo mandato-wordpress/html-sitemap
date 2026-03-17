@@ -117,7 +117,7 @@ For the latest information visit the website.
  YES! As of version 2.0, you can now add an HTML Sitemap block to your page and customize all of the parameters.
 
  = Does the addition of the HTML Sitemap Block impact the performance of my website? =
- NO! The new HTML Sitemap Block is a wrapper around the `[html-sitemap]` shortcode that utilizes the built-in [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function.
+ NO! The new HTML Sitemap Block is a wrapper around the `[html_sitemap]` shortcode that utilizes the built-in [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function.
 
  = Do I have to use the new Blocks feature to use this plugin? =
  NO! The original shortcode still works as it did in version 1.3.

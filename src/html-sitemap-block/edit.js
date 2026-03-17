@@ -16,11 +16,8 @@ import { useState } from '@wordpress/element';
  */
 import {
   useBlockProps,
-	InnerBlocks,
 	InspectorControls,
 	BlockControls,
-  BlockIcon,
-	AlignmentToolbar,
 } from '@wordpress/block-editor';
 import { 
   TextControl, 
@@ -30,7 +27,6 @@ import {
   ToolbarGroup,
   Placeholder,
   __experimentalText as Text,
-	Button,
 } from '@wordpress/components'
 
 import { code } from '@wordpress/icons';
@@ -43,6 +39,16 @@ import { code } from '@wordpress/icons';
  */
 import './editor.scss';
 
+const escapeShortcodeAttributeValue = ( value ) => {
+ 	if ( value === null || value === undefined ) {
+ 		return '';
+ 	}
+ 	const stringValue = String( value );
+ 	return stringValue
+ 		.replace( /"/g, '&quot;' )
+ 		.replace( /]/g, '&#93;' );
+};
+
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
@@ -52,7 +58,7 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-  // Add a state variable to track if teh shortcode or the preview button has been selected
+  // Add a state variable to track if the shortcode or the preview button has been selected
   const [ viewMode, setViewMode ] = useState( 'shortcode' );
 
 	return (
@@ -82,7 +88,7 @@ export default function Edit( { attributes, setAttributes } ) {
               setAttributes( { child_of: newChildOf } );
             } }
             help={
-              __('Specify a parent page ID to only include its child pages in the sitemap. The value \'CURRENT’ will use the current page ID. The value \'PARENT\' will use the current page parent ID.', 'html-sitemap')
+              __('Specify a parent page ID to only include its child pages in the sitemap. The value \'CURRENT\' will use the current page ID. The value \'PARENT\' will use the current page parent ID.', 'html-sitemap')
             }
           />
           <TextControl
@@ -332,9 +338,9 @@ export default function Edit( { attributes, setAttributes } ) {
           instructions={ __( 'Configure the block settings to generate the shortcode.', 'html-sitemap' ) }
         >
           <code>
-            [html-sitemap 
+            [html_sitemap 
               {Object.entries(attributes).some(([key, value]) => value !== '' && key !== 'className') ? ' ' : ''}
-              {Object.entries(attributes).filter(([key, value]) => value !== '' && key !== 'className').map(([key, value]) => `${key}="${value}"`).join(' ')}
+              {Object.entries(attributes).filter(([key, value]) => value !== '' && key !== 'className').map(([key, value]) => `${key}="${escapeShortcodeAttributeValue( value )}"`).join(' ')}
             ]
           </code>
         </Placeholder>
