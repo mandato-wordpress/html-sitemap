@@ -66,13 +66,14 @@ export default function Edit( { attributes, setAttributes } ) {
       <BlockControls>
         <ToolbarGroup>
           <ToolbarButton
-              label="Shortcode"
+              label={ __( 'Shortcode', 'html-sitemap' ) }
+              text={ __( 'Shortcode', 'html-sitemap' ) }
               icon={ code }
               isPressed={ viewMode === 'shortcode' }
               onClick={ () => setViewMode( 'shortcode' ) }
           />
           <ToolbarButton
-              label="Preview"
+              label={ __( 'Preview', 'html-sitemap' ) }
               text={ __( 'Preview', 'html-sitemap' ) }
               isPressed={ viewMode === 'preview' }
               onClick={ () => setViewMode( 'preview' ) }
