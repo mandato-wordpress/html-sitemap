@@ -37,6 +37,7 @@ The following wp_list_pages tag attribute options are supported:
 * `post_status` &mdash; Comma-separated list or array of post statuses to include. Default 'publish'
 * `show_date` &mdash; Whether to display the page publish or modified date for each page. Accepts 'modified' or any other value. An empty value hides the date.
 * `sort_column` &mdash; Comma-separated list of column names to sort the pages by. Accepts 'post_author', 'post_date', 'post_title', 'post_name', 'post_modified', 'post_modified_gmt', 'menu_order', 'post_parent', 'ID', 'rand', or 'comment_count'. Default 'post_title'.
+* `sort_order` &mdash; 'ASC' or 'DESC'. Default 'ASC'.
 
 Please see documentation for the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function for reference.
 
@@ -134,6 +135,10 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 1. HTML Page Sitemap in the Default WordPress theme.
 
 == Changelog ==
+
+= 2.0 =
+* Released on 2026-03-18
+* Added Block Editor block for HTML Sitemap with support for all shortcode attributes.
 
 = 1.3.9 =
 * Released on 2026-02-11

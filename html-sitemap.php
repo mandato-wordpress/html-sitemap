@@ -19,6 +19,8 @@ Copyright 2009-2026 Angelo Mandato, (http://angelo.mandato.com)
 */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+define('HTML_SITEMAP_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+
 /*
 	Add the sitemap when shortcode is encountered
 	@param $args - arguments or attributes specified in the shortcode tag.
@@ -136,5 +138,10 @@ function html_sitemap_something_to_translate() {
 add_shortcode('html-sitemap', 'html_sitemap_shortcode_handler'); // This is no longer recommended as any plugin that creates their own shortcode starting with 'html' will also get the handler call
 add_shortcode('htmlsitemap', 'html_sitemap_shortcode_handler');
 add_shortcode('html_sitemap', 'html_sitemap_shortcode_handler');
+
+if( is_admin() && !class_exists('HtmlSitemapAdmin') ) {
+	require_once HTML_SITEMAP_PLUGIN_PATH . 'html-sitemap-admin.class.php';
+	HtmlSitemapAdmin::get_instance();
+}
 
 // eof

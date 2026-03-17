@@ -33,6 +33,13 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
+## [2.0] - 2026-03-18
+
+Block editor functionality.
+
+- Added Block Editor block for HTML Sitemap with support for all shortcode attributes.
+- Updated readme.txt with block editor instructions and screenshots.
+
 ## [1.3.9] - 2026-02-11
 
 - Fixed security issue with Authenticated user (Contributor+), user could include Cross-Site Scripting within the HTML Sitemap shortcode
