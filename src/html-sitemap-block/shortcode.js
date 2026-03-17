@@ -18,12 +18,12 @@ const escapeShortcodeAttributeValue = ( value ) => {
 };
 
 export const generateShortcode = ( attributes ) => {
-  var shortcodeText = '[html_sitemap';
-  Object.entries(attributes).forEach(([key, value]) => {
-    if (value !== '' && key !== 'className') {
-      shortcodeText += ` ${key}="${escapeShortcodeAttributeValue( value )}"`;
+  let shortcodeText = '[html_sitemap';
+  Object.entries( attributes ).forEach( ( [ key, value ] ) => {
+    if ( value !== '' && key !== 'className' ) {
+      shortcodeText += ` ${ key }="${ escapeShortcodeAttributeValue( value ) }"`;
     }
-  });
+  } );
   shortcodeText += ']';
 
   return shortcodeText;
