@@ -9,7 +9,7 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds an HTML (Not XML) sitemap of your pages (not posts) by using the HTML Sitemap Block or [html_sitemap] shortcode, perfect for those who use WordPress as a CMS.
+Adds an HTML (Not XML) sitemap of your pages (not posts) by using the HTML Sitemap Block or Shortcode, perfect for those who use WordPress as a CMS.
 
 == Description ==
 This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by using the shortcode `[html_sitemap]`. This plugin can display a sitemap with specific depths, from a specific parent page and include/exclude specific pages by ID. The sitemap uses the unordered HTML list tags `<ul>` and `<li>`.
@@ -60,7 +60,7 @@ The `ordered_list_type` attribute options in more detail:
 
 Note: This plugin only works with Hierarchical Custom Post Types such as `pages`. This plugin will not work if your post type is not hierarchical. Not setting an ordered_list_type will use an unordered list (default).
 
-= Examples =
+= Shortcode Examples =
 First example shows how to add a sitemap for the entire site.
 
 `[html_sitemap]`
@@ -131,7 +131,7 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 3. Find "HTML Page Sitemap" in the search results.
 4. Click *Install Now* to install the WordPress Plugin.
 5. Click Activate to activate it.
-6. Add the shortcode [html_sitemap] to the page(s) of your choice.
+6. Add the HTML Sitemap Block or [html_sitemap] Shortcode to the page(s) of your choice.
 
 = Manual Plugin Installation =
 
@@ -140,7 +140,7 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 3. With your FTP program, upload the plugin folder to the wp-content/plugins folder in your WordPress directory online.
 4. Go to Plugins screen and find "HTML Page Sitemap" plugin in the list.
 5. Click Activate to activate it.
-6. Add the shortcode [html_sitemap] to the page(s) of your choice.
+6. Add the HTML Sitemap Block or [html_sitemap] Shortcode to the page(s) of your choice.
 
 == Screenshots ==
 1. HTML Page Sitemap in the Default WordPress theme.
@@ -149,6 +149,10 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 4. Preview of Sitemap block in page "Level 1" with child_of set to CURRENT.
 
 == Changelog ==
+
+= 2.0.1 =
+* Released on TBD
+* Updated short description to be within 150 characters.
 
 = 2.0 =
 * Released on 2026-03-17
@@ -160,35 +164,11 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 * Fixed security issue with Authenticated user (Contributor+), user could include Cross-Site Scripting within the HTML Sitemap shortcode
 * Added banner and icon images
 
-= 1.3.8 =
-* Released on 2025-12-16
-* Tested with WordPress up to version 6.9
-
-= 1.3.7 =
-* Released on 2025-04-21
-* Tested with WordPress up to version 6.8
-* Complete changelog moved to CHANGELOG.md
-
-= 1.3.6 =
-* Released on 2025-02-09
-* Tested with WordPress up to version 6.7.1
-* Project now managed on [GitHub](https://github.com/mandato-wordpress/html-sitemap)
-
-= 1.3.5 =
-* Release skipped
-
-= 1.3.4 =
-* Released on 2024-08-13
-* Tested with WordPress up to version 6.6
-* Readme.txt updated to latest requirements (ref: https://developer.wordpress.org/plugins/wordpress-org/how-your-readme-txt-works/)
-
-
 = Complete Changelog =
 [Complete changelog available on GitHub](https://github.com/mandato-wordpress/html-sitemap/blob/main/CHANGELOG.md)
 
 == Upgrade Notice ==
 None at this time.
-
 
 == Contributors ==
 [Angelo Mandato](https://angelo.mandato.com), founder of [Painless Analytics](https://www.painlessanalytics.com) and [FrontPup](https://www.frontpup.com) - Plugin author
