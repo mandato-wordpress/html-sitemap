@@ -41,16 +41,6 @@ import './editor.scss';
 
 import { generateShortcode } from './shortcode';
 
-const escapeShortcodeAttributeValue = ( value ) => {
- 	if ( value === null || value === undefined ) {
- 		return '';
- 	}
- 	const stringValue = String( value );
- 	return stringValue
- 		.replace( /"/g, '&quot;' )
- 		.replace( /]/g, '&#93;' );
-};
-
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
