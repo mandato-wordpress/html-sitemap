@@ -12,7 +12,7 @@
       "pluginData": {
         "resource": "git:directory",
         "url": "https://github.com/mandato-wordpress/html-sitemap/",
-        "ref": "trunk"
+        "ref": "main"
       },
       "options": {
         "activate": true
