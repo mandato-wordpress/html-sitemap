@@ -9,7 +9,13 @@
   "steps": [
     {
       "step": "installPlugin",
-      "pluginName": "html-sitemap"
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "html-sitemap"
+      },
+      "options": {
+        "activate": true
+      }
     },
     {
       "step": "setSiteOptions",
