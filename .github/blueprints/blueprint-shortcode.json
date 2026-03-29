@@ -5,7 +5,7 @@
     "wp": "latest"
   },
   "login": true,
-  "landingPage": "/",
+  "landingPage": "/sitemap-shortcode-demo/",
   "steps": [
     {
       "step": "installPlugin",

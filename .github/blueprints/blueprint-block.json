@@ -5,7 +5,7 @@
     "wp": "latest"
   },
   "login": true,
-  "landingPage": "/",
+  "landingPage": "/sitemap-block-demo/",
   "steps": [
     {
       "step": "installPlugin",
