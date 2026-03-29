@@ -8,6 +8,10 @@
   "landingPage": "/sitemap-block-demo/",
   "steps": [
     {
+      "step": "installPlugin",
+      "pluginName": "html-sitemap"
+    },
+    {
       "step": "setSiteOptions",
       "options": {
         "blogname": "HTML Sitemap Plugin Demo",
