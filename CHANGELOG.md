@@ -33,6 +33,12 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
+## [2.1] - 2026-03-30
+
+Preview functionality added for WordPress.org plugin directory.
+
+- Added blueprint.json for WordPress previews, as well as 2 more blueprint-block.json and blueprint-shortcode.json on GitHub with links in the readme.txt.
+
 ## [2.0] - 2026-03-17
 
 Block editor functionality.

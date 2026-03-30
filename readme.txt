@@ -43,6 +43,11 @@ The following wp_list_pages tag attribute options are supported:
 
 Please see documentation for the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function for reference.
 
+== Demos ==
+
+* [Demo of the HTML Sitemap Block](https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fmandato-wordpress%2Fhtml-sitemap%2Frefs%2Fheads%2Fmain%2F.github%2Fblueprints%2Fblueprint-block.json)
+* [Demo of the HTML Sitemap shortcode](https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fmandato-wordpress%2Fhtml-sitemap%2Frefs%2Fheads%2Fmain%2F.github%2Fblueprints%2Fblueprint-shortcode.json)
+
 In addition the following tag attributes are available exclusively for this plugin:
 
 * `class` &mdash; Specify class values for the initial HTML Page Sitemap `<ul>` list tag.
@@ -149,6 +154,10 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 4. Preview of Sitemap block in page "Level 1" with child_of set to CURRENT.
 
 == Changelog ==
+
+= 2.1 =
+* Released on 2026-03-30
+* Preview functionality added for WordPress.org plugin directory.
 
 = 2.0 =
 * Released on 2026-03-17
