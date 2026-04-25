@@ -9,7 +9,7 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds an HTML (Not XML) sitemap of your pages (not posts) by using the HTML Sitemap Block or [html_sitemap] shortcode, perfect for those who use WordPress as a CMS.
+Adds an HTML (Not XML) sitemap of your pages (not posts) by using the HTML Sitemap Block or shortcode, perfect for those who use WordPress as a CMS.
 
 == Description ==
 This simple plugin adds an HTML (Not XML) sitemap of your pages (not posts) by using the shortcode `[html_sitemap]`. This plugin can display a sitemap with specific depths, from a specific parent page and include/exclude specific pages by ID. The sitemap uses the unordered HTML list tags `<ul>` and `<li>`.
