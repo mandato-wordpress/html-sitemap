@@ -4,7 +4,7 @@ Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, block, shortcode
 Requires at least: 3.7
 Tested up to: 6.9
-Stable tag: 2.1
+Stable tag: 2.1.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -38,7 +38,7 @@ The following wp_list_pages tag attribute options are supported:
 * `post_type` &mdash; Post type to query for. Default 'page'
 * `post_status` &mdash; Comma-separated list or array of post statuses to include. Default 'publish'
 * `show_date` &mdash; Whether to display the page publish or modified date for each page. Accepts 'modified' or any other value. An empty value hides the date.
-* `sort_column` &mdash; Comma-separated list of column names to sort the pages by. Accepts 'post_author', 'post_date', 'post_title', 'post_name', 'post_modified', 'post_modified_gmt', 'menu_order', 'post_parent', 'ID', 'rand', or 'comment_count'. Default 'post_title'.
+* `sort_column` &mdash; Comma-separated list of column names to sort the pages by. Accepts 'post_author', 'post_date', 'post_title', 'post_name', 'post_modified', 'post_modified_gmt', 'menu_order', 'post_parent', 'ID', 'rand', or 'comment_count'. Default 'menu_order, post_title'.
 * `sort_order` &mdash; 'ASC' or 'DESC'. Default 'ASC'.
 
 Please see documentation for the [`wp_list_pages`](https://codex.wordpress.org/Function_Reference/wp_list_pages) function for reference.
@@ -154,6 +154,10 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 4. Preview of Sitemap block in page "Level 1" with child_of set to CURRENT.
 
 == Changelog ==
+
+= 2.1.1 =
+* Released on 2026-04-24
+* Updated typo documenting the `sort_order` default.
 
 = 2.1 =
 * Released on 2026-03-30

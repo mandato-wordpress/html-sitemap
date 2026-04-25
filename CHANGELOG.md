@@ -33,6 +33,10 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
+## [2.1.1] - 2026-03-30
+
+* Updated typo documenting the `sort_order` default.
+
 ## [2.1] - 2026-03-30
 
 Preview functionality added for WordPress.org plugin directory.
