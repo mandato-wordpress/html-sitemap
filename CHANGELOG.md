@@ -33,7 +33,7 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 ## [Unreleased]
 TBD
 
-## [2.1.1] - 2026-03-30
+## [2.1.2] - 2026-03-30
 
 * Updated typo documenting the `sort_order` default.
 

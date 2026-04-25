@@ -4,7 +4,7 @@ Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, block, shortcode
 Requires at least: 3.7
 Tested up to: 6.9
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
