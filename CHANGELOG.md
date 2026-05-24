@@ -42,6 +42,10 @@ TBD
 
 * Updated typo documenting the `sort_order` default.
 
+## [2.1.1] - N/A
+
+Release skipped.
+
 ## [2.1] - 2026-03-30
 
 Preview functionality added for WordPress.org plugin directory.
