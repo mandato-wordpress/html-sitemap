@@ -155,6 +155,11 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 
 == Changelog ==
 
+= 2.1.3 =
+
+* Released on 2026-05-24
+* Tested with WordPress 7.0.
+
 = 2.1.1 =
 * Released on 2026-04-24
 * Updated typo documenting the `sort_order` default.
