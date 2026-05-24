@@ -160,9 +160,12 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 * Released on 2026-05-24
 * Tested with WordPress 7.0.
 
-= 2.1.1 =
+= 2.1.2 =
 * Released on 2026-04-24
 * Updated typo documenting the `sort_order` default.
+
+= 2.1.1 =
+Release skipped.
 
 = 2.1 =
 * Released on 2026-03-30
