@@ -31,11 +31,20 @@ The first version of a MAJOR or MINOR release will exclude the second dot follow
 For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versioning is strictly followed.
 
 ## [Unreleased]
+
 TBD
+
+## [2.1.3] - 2026-05-24
+
+* Tested with WordPress 7.0.
 
 ## [2.1.2] - 2026-03-30
 
 * Updated typo documenting the `sort_order` default.
+
+## [2.1.1] - N/A
+
+Release skipped.
 
 ## [2.1] - 2026-03-30
 

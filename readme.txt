@@ -3,8 +3,8 @@ Contributors: amandato, painlessanalytics
 Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, block, shortcode
 Requires at least: 3.7
-Tested up to: 6.9
-Stable tag: 2.1.2
+Tested up to: 7.0
+Stable tag: 2.1.3
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -155,9 +155,17 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 
 == Changelog ==
 
-= 2.1.1 =
+= 2.1.3 =
+
+* Released on 2026-05-24
+* Tested with WordPress 7.0.
+
+= 2.1.2 =
 * Released on 2026-04-24
 * Updated typo documenting the `sort_order` default.
+
+= 2.1.1 =
+Release skipped.
 
 = 2.1 =
 * Released on 2026-03-30
