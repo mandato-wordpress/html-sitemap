@@ -44,8 +44,7 @@ class HtmlSitemapAdmin {
         <div class="notice notice-info is-dismissible html-sitemap-review-notice" data-nonce="<?php echo esc_attr( $nonce ); ?>">
             <p>
                 <strong><?php esc_html_e( 'Are you enjoying the HTML Page Sitemap plugin?', 'html-sitemap' ); ?></strong>
-                <?php esc_html_e( 'If it\'s been helpful on your site, your review on WordPress.org makes a huge difference — it helps other site owners discover the plugin and encourages continued development.', 'html-sitemap' ); ?>
-                <?php esc_html_e( 'It only takes a minute and means the world to us!', 'html-sitemap' ); ?>
+                <?php esc_html_e( 'If it\'s been helpful on your site, your review on WordPress.org makes a huge difference — it helps other site owners discover the plugin and encourages continued development. It only takes a minute and means the world to us!', 'html-sitemap' ); ?>
                 &nbsp;&#11088;&nbsp;<a href="<?php echo esc_url( $review_url ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Click here to leave a review on WordPress.org &rarr;', 'html-sitemap' ); ?></a>
             </p>
         </div>
