@@ -64,7 +64,7 @@ class HtmlSitemapAdmin {
     public function dismiss_review_notice() {
         check_ajax_referer( 'html_sitemap_dismiss_review', 'nonce' );
         update_user_meta( get_current_user_id(), 'html_sitemap_review_dismissed', '1' );
-        wp_die();
+        wp_send_json_success();
     }
 
     public function init() {
