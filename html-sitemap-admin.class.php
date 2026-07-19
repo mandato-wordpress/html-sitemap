@@ -24,8 +24,50 @@ class HtmlSitemapAdmin {
      * Constructor
      */
     private function __construct() {
-        
+
         add_action('init', [$this, 'init'] );
+        add_action('admin_notices', [$this, 'maybe_show_review_notice']);
+        add_action('wp_ajax_html_sitemap_dismiss_review', [$this, 'dismiss_review_notice']);
+    }
+
+    public function maybe_show_review_notice() {
+        $screen = get_current_screen();
+        if ( ! $screen || $screen->id !== 'dashboard' ) {
+            return;
+        }
+        if ( ! current_user_can( 'manage_options' ) ) {
+            return;
+        }
+        if ( get_option( 'html_sitemap_review_dismissed' ) ) {
+            return;
+        }
+        $review_url = 'https://wordpress.org/support/plugin/html-sitemap/reviews/#new-post';
+        $nonce      = wp_create_nonce( 'html_sitemap_dismiss_review' );
+        ?>
+        <div class="notice notice-info is-dismissible html-sitemap-review-notice" data-nonce="<?php echo esc_attr( $nonce ); ?>">
+            <p>
+                <strong><?php esc_html_e( 'Are you enjoying the HTML Page Sitemap plugin?', 'html-sitemap' ); ?></strong>
+                <?php esc_html_e( 'If it\'s been helpful on your site, your review on WordPress.org makes a huge difference — it helps other site owners discover the plugin and encourages continued development. It only takes a minute and means the world to us!', 'html-sitemap' ); ?>
+                &nbsp;&#11088;&nbsp;<a href="<?php echo esc_url( $review_url ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Click here to leave a review on WordPress.org &rarr;', 'html-sitemap' ); ?></a>
+            </p>
+        </div>
+        <script>
+        jQuery(function($) {
+            $(document).on('click', '.html-sitemap-review-notice .notice-dismiss', function() {
+                $.post(ajaxurl, {
+                    action: 'html_sitemap_dismiss_review',
+                    nonce: $('.html-sitemap-review-notice').data('nonce')
+                });
+            });
+        });
+        </script>
+        <?php
+    }
+
+    public function dismiss_review_notice() {
+        check_ajax_referer( 'html_sitemap_dismiss_review', 'nonce' );
+        update_option( 'html_sitemap_review_dismissed', '1' );
+        wp_send_json_success();
     }
 
     public function init() {

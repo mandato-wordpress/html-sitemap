@@ -34,6 +34,14 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 
 TBD
 
+## [2.2] - 2026-07-19
+
+Added a dismissible review prompt notice for administrators on the WordPress dashboard.
+
+- Added a notice on the WordPress dashboard (wp-admin/index.php) asking administrators if they are enjoying the plugin and encouraging them to leave a review on WordPress.org.
+  - Notice is only displayed to users with the `manage_options` capability (administrators).
+  - Once dismissed by any one administrator, the notice is hidden site-wide for all users and is not shown again.
+
 ## [2.1.3] - 2026-05-24
 
 * Tested with WordPress 7.0.
