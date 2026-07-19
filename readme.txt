@@ -4,7 +4,7 @@ Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, block, shortcode
 Requires at least: 3.7
 Tested up to: 7.0
-Stable tag: 2.1.3
+Stable tag: 2.2
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -154,6 +154,10 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 4. Preview of Sitemap block in page "Level 1" with child_of set to CURRENT.
 
 == Changelog ==
+
+= 2.2 =
+* Released on 2026-07-19
+* Added a dismissible review prompt notice on the WordPress dashboard for administrators.
 
 = 2.1.3 =
 
