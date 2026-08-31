@@ -20,6 +20,26 @@ Copyright 2009-2026 Angelo Mandato, (http://angelo.mandato.com)
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 define('HTML_SITEMAP_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define('HTML_SITEMAP_INSTALLED_OPTION', 'html_sitemap_installed_on' ); // Option storing the UNIX timestamp (UTC) of when this plugin was first installed/activated
+
+/*
+	Get the timestamp of when this plugin was first installed/activated.
+	The value is stored the first time it is needed, either when the plugin is
+	activated or, for installs that pre-date this option, the first time it is read.
+	@return int - UNIX timestamp (UTC) of the first install/activation.
+*/
+function html_sitemap_get_installed_on() {
+	$installed_on = get_option( HTML_SITEMAP_INSTALLED_OPTION );
+	if( !empty($installed_on) && is_numeric($installed_on) ) {
+		return intval($installed_on);
+	}
+
+	$installed_on = time();
+	update_option( HTML_SITEMAP_INSTALLED_OPTION, $installed_on, false );
+	return $installed_on;
+}
+
+register_activation_hook( __FILE__, 'html_sitemap_get_installed_on' );
 
 /*
 	Add the sitemap when shortcode is encountered
