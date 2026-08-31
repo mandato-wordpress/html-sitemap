@@ -8,7 +8,7 @@ Contributors: Angelo Mandato, Founder and CTO of [Painless Analytics](https://ww
 Author URI: http://angelo.mandato.com/
 
 Requires at least: 3.7
-Tested up to: 7.0
+Tested up to: 7.1
 Text Domain: html-sitemap
 Change Log: See readme.txt for complete change log
 Contributors: Angelo Mandato, founder of Painless Analytics

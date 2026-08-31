@@ -36,6 +36,7 @@ Delayed the review prompt notice until the plugin has been installed for two wee
 
 - Added the `html_sitemap_installed_on` option storing the date/time (UNIX timestamp) of when the plugin was first installed/activated.
 - Changed the review prompt notice to only appear once 14 days have passed since that first install/activation date.
+- Tested with WordPress 7.1.
 
 ## [2.2] - 2026-07-19
 
