@@ -32,6 +32,10 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 
 ## [Unreleased]
 
+TBD
+
+## [2.2.1] - 2026-08-31
+
 Delayed the review prompt notice until the plugin has been installed for two weeks.
 
 - Added the `html_sitemap_installed_on` option storing the date/time (UNIX timestamp) of when the plugin was first installed/activated.

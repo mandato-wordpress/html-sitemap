@@ -4,7 +4,7 @@ Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, block, shortcode
 Requires at least: 4.2
 Tested up to: 7.1
-Stable tag: 2.2
+Stable tag: 2.2.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -154,6 +154,13 @@ Install using the [built-in plugin installer](https://codex.wordpress.org/Admini
 4. Preview of Sitemap block in page "Level 1" with child_of set to CURRENT.
 
 == Changelog ==
+
+= 2.2.1 =
+* Released on 2026-08-31
+* Added a setting that stores the date/time when the plugin was first installed/activated.
+* The review prompt notice now only appears after the plugin has been installed for 14 days.
+* Raised the minimum supported WordPress version to 4.2.
+* Tested with WordPress 7.1.
 
 = 2.2 =
 * Released on 2026-07-19
