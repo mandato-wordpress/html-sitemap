@@ -8,3 +8,4 @@
 /.distignore export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
+/CLAUDE.md export-ignore

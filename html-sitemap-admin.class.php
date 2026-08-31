@@ -7,6 +7,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class HtmlSitemapAdmin {
 
+    /**
+     * Number of days after the first install/activation before the review notice is shown.
+     */
+    const REVIEW_NOTICE_DELAY_DAYS = 14;
+
     private static $instance = null;
     private $settings = [];
 
@@ -41,6 +46,9 @@ class HtmlSitemapAdmin {
         if ( get_option( 'html_sitemap_review_dismissed' ) ) {
             return;
         }
+        if ( ! $this->review_notice_delay_passed() ) {
+            return;
+        }
         $review_url = 'https://wordpress.org/support/plugin/html-sitemap/reviews/#new-post';
         $nonce      = wp_create_nonce( 'html_sitemap_dismiss_review' );
         ?>
@@ -62,6 +70,20 @@ class HtmlSitemapAdmin {
         });
         </script>
         <?php
+    }
+
+    /**
+     * Determine if enough time has passed since the plugin was first installed/activated
+     * to ask the user for a review.
+     *
+     * @return bool true when the review notice delay has elapsed, otherwise false.
+     */
+    private function review_notice_delay_passed() {
+        if ( ! function_exists( 'html_sitemap_get_installed_on' ) ) {
+            return false;
+        }
+        $installed_on = html_sitemap_get_installed_on();
+        return ( time() >= $installed_on + ( self::REVIEW_NOTICE_DELAY_DAYS * DAY_IN_SECONDS ) );
     }
 
     public function dismiss_review_notice() {

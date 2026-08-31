@@ -34,6 +34,15 @@ For example `2.0` will be used rather than `2.0.0`. Otherwise Semantic Versionin
 
 TBD
 
+## [2.2.1] - 2026-08-31
+
+Delayed the review prompt notice until the plugin has been installed for two weeks.
+
+- Added the `html_sitemap_installed_on` option storing the date/time (UNIX timestamp) of when the plugin was first installed/activated.
+- Changed the review prompt notice to only appear once 14 days have passed since that first install/activation date.
+- Tested with WordPress 7.1.
+- Changed the minimum supported WordPress version from 3.7 to 4.2, the version that introduced the `update_option()` autoload parameter and the dismissible admin notice used by the review prompt.
+
 ## [2.2] - 2026-07-19
 
 Added a dismissible review prompt notice for administrators on the WordPress dashboard.
