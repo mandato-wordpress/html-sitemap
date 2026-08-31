@@ -2,7 +2,7 @@
 Contributors: amandato, painlessanalytics
 Donate link: http://angelo.mandato.com/contact/
 Tags: html sitemap, sitemap, page, block, shortcode
-Requires at least: 3.7
+Requires at least: 4.2
 Tested up to: 7.1
 Stable tag: 2.2
 Requires PHP: 5.4

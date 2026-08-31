@@ -7,7 +7,7 @@ Version: 2.2
 Contributors: Angelo Mandato, Founder and CTO of [Painless Analytics](https://www.painlessanalytics.com)
 Author URI: http://angelo.mandato.com/
 
-Requires at least: 3.7
+Requires at least: 4.2
 Tested up to: 7.1
 Text Domain: html-sitemap
 Change Log: See readme.txt for complete change log
